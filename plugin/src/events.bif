@@ -1,0 +1,10 @@
+## Generated for any packet encapsulated in a CAPWAP tunnel.
+## See :rfc:`5415` for more information about the CAPWAP protocol.
+##
+## outer: The CAPWAP tunnel connection.
+##
+## inner: The CAPWAP-encapsulated Ethernet packet header and transport header.
+##
+## .. note:: Since this event may be raised on a per-packet basis, handling
+##    it may become particularly expensive for real-time analysis.
+event capwap_packet%(outer: connection, inner: pkt_hdr%);

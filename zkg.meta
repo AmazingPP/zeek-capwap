@@ -1,0 +1,22 @@
+[package]
+tags = capwap, zeek, packet analyzer
+script_dir = plugin/scripts
+build_command = ./configure && cd build && make
+test_command = cd testing && btest -c btest.cfg
+summary = A Zeek CAPWAP packet analyzer
+depends =
+  zkg >=2.0
+  zeek >=4.2.0
+
+[template]
+source = https://github.com/zeek/package-template
+version = v2.0.0
+zkg_version = 2.13.0
+features = github-ci,license,plugin
+
+[template_vars]
+name = CAPWAP
+namespace = Zeek
+author = Fupeng Zhao <fupeng.zhao@foxmail.com>
+license = bsd-3
+
