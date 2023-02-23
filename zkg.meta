@@ -2,7 +2,7 @@
 tags = capwap, zeek, packet analyzer
 script_dir = plugin/scripts
 build_command = ./configure && cd build && make
-test_command = cd testing && btest -c btest.cfg
+test_command = cd testing && btest -c btest.cfg -D
 summary = A Zeek CAPWAP packet analyzer
 depends =
   zkg >=2.0
